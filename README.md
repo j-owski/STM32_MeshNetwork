@@ -4,17 +4,17 @@ This project uses the MicroController `STM32F401` and the RealTime Operating Sys
 A PC can connect over a terminal program with the Microcontroller (for best experience please use `TeraTerm`) and send messages over the terminal interface to the other connected PCs.
 
 ```
-                                ┌───┐        ┌───┐                              ╔════╗  reveive:
-                                |STM|________|STM|                 ┌───┐        ║PC 2║  PC1: "Hello PC2"
-                                └───┘        └───┘                 |STM|________║    ║
-                                 /             /                   └───┘        ╚════╝
-                                /             |                  ___/              
-                               /              /          ┌───┐__/                      
-                              /              |       ____|STM|___                     
-            ╔════╗           /              ┌───┐___/    └───┘   \                       
-send PC2:   ║PC 1║        ┌───┐       ______|STM|                  \      ┌───┐            
-"Hello PC2" ║    ║________|STM|_____/       +───┘                   \_____|STM|            
-            ╚════╝        └───┘                                           └───┘
+		send:           ╔════╗      ┌───┐        ┌───┐                              ╔════╗  reveive:
+		PC2:"Hello PC2" ║PC 1║______|STM|________|STM|                 ┌───┐        ║PC 3║  PC2:"Hi there!"
+						║    ║      └───┘        └───┘                 |STM|________║    ║
+						╚════╝       /             /                   └───┘        ╚════╝
+									/             |                  ___/              
+								   /              /          ┌───┐__/                      
+								  /              |       ____|STM|___                     
+reveive:        ╔════╗           /              ┌───┐___/    └───┘   \                   ╔════╗
+PC1:"Hello PC2" ║PC 2║        ┌───┐       ______|STM|                  \      ┌───┐      ║PC 4║
+send:           ║    ║________|STM|_____/       └───┘                   \_____|STM|______║    ║
+PC3:"Hi there!" ╚════╝        └───┘                                           └───┘      ╚════╝
 ```
 
 The RealTime operating system allows the software to be decupled of the hardware layer underneath. So theoretically this program can be ported to other MicroControllers that implement FreeRTOS. This also allows to let different types of Microcontroller to talk to one and another over USART.
