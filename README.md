@@ -78,8 +78,8 @@ The routing is done on the basics of a very simple distance vector routing princ
 - Open the ST-Link utility and open the file `STM32F401xx.hex`
 - Now connect the STM32 to your PC and in your ST-Link utility click on `Connect`
 - Make sure that the write memory map is choosen by clicking `Target`:`Target memory compare with file`
-- Now you can flash the chip with `Target`:`Program & Verify` and click on `Start`<br>
-- Download the terminal program `TeraTerm`, open it and select `Setup`:`Serial port`
+- Now you can flash the chip with `Target`:`Program & Verify` and click on `Start`
+- Download the terminal program `TeraTerm`, open it and select `Setup`:`Serial port`<br>
   Port:your_COM_port, Baud rate:400000, Data:8bit, Parity:none, Stop:1bit, Flow control:none
 - Click on OK and reset the STM32 by pressing the black button
 - You should be greeted by a startup screen
