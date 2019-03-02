@@ -59,9 +59,15 @@ If another PC connects to the network the terminal will notify you about that.
 You can send messages with the command: `XX: your message` where as `XX` stands for the ID of the receiver ID.
 This project is only a proof of concept and the program will sadly only allow the text to be 40 characters long.
 
+![](Doc/example.png)
+
 ## How it works
 The routing is done on the basics of a very simple distance vector routing principle similar to RIPv1. It uses the PC ID, the hop count and the ingoing interface to determine the route of a message.
 
+<p align="center">
+  <img src="Doc/RTOS Projekt v6.jpg"="350" title="Diagram: How it works">
+</p>
+
 ## How to install
 
-
+coming soon.
