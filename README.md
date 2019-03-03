@@ -57,7 +57,6 @@ We can see that we first have to enter our ID. This can be a value between 1 and
 If another PC connects to the network the terminal will notify you about that.
 
 You can send messages with the command: `XX: your message` where as `XX` stands for the ID of the receiver ID.
-This project is only a proof of concept and the program will sadly only allow the text to be 40 characters long.
 
 ![](Doc/example.png)
 
@@ -93,3 +92,9 @@ Connect the TX from one Usart to the RX of the other & build your own Mesh-Netwo
 ## Compile yourself
 I used `Keil uVision V5.23.0.0` to compile this project. Load all source files and `FreeRTOS V10.0.1` into your project. If you have a different MicroController you can change the hardware configuration in the `hardware.c` and `hardware.h`. If your courios how the program works behind the scence you can activate the `debug` messages in `main.h` (debug can be set from 0 to 4, depending how much you want to see).<br>
 Happy hacking!
+
+# Todo
+There is room for improvement:
+- Implement DMA for transmission and receipt of characters
+- change the FreeRTOS memory management from heap1.c to heap5.c
+
