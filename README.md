@@ -97,4 +97,5 @@ Happy hacking!
 There is room for improvement:
 - Implement DMA for transmission and receipt of characters
 - change the FreeRTOS memory management from heap1.c to heap5.c
+- Tweak and improve the network protocol
 
